@@ -24,6 +24,16 @@
         };
     };
 
+    macros {
+        SELECT_LINE: SELECT_LINE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp HOME &kp LS(END)>;
+
+            label = "SELECT_LINE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
