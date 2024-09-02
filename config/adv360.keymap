@@ -66,19 +66,19 @@
     };
 
     macros {
-        SELECT_LINE_WIN: SELECT_LINE {
+        SELECT_LINE_WIN: SELECT_LINE_WIN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp HOME &kp LS(END)>;
 
-            label = "SELECT_LINE";
+            label = "SELECT_LINE_WIN";
         };
 
-        TOGGLE_WINDOWS: new_macro {
+        TOGGLE_WINDOWS: TOGGLE_WINDOWS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2 &tog 1>;
-            label = "NEW_MACRO";
+            label = "TOGGLE_WINDOWS";
         };
 
         TOGGLE_MACOS: TOGGLE_MACOS {
@@ -116,11 +116,11 @@
             label = "HYPER_0";
         };
 
-        SWITCH_TO_MAC_LOGI_VERTICAL: new_macro {
+        SWITCH_TO_MAC_LOGI_VERTICAL: SWITCH_TO_MAC_LOGI_VERTICAL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&HYPER_0 &TOGGLE_MACOS>;
-            label = "NEW_MACRO";
+            label = "SWITCH_TO_MAC_LOGI_VERTICAL";
         };
 
         SWITCH_TO_WIN_LOGI_VERTICAL: SWITCH_TO_WIN_LOGI_VERTICAL {
@@ -128,6 +128,30 @@
             #binding-cells = <0>;
             bindings = <&HYPER_0 &TOGGLE_WINDOWS>;
             label = "SWITCH_TO_WIN_LOGI_VERTICAL";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        open_paren {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <41 42>;
+        };
+
+        close_paren {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <42 43>;
+        };
+
+        open_curly {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <55 56>;
+        };
+
+        close_curly {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <56 57>;
         };
     };
 
